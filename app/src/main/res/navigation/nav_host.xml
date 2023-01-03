@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/acilisFragment">
+    <fragment
+        android:id="@+id/anasayfaFragment2"
+        android:name="com.deliysuf.lottieapp.ui.fragments.AnasayfaFragment"
+        android:label="AnasayfaFragment"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/action_anasayfaFragment2_to_sepetFragment"
+            app:destination="@id/sepetFragment"
+            app:enterAnim="@anim/animatrix" />
+        <argument
+            android:name="restorant"
+            app:argType="com.deliysuf.lottieapp.data.Restorant" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.deliysuf.lottieapp.ui.fragments.SepetFragment"
+        android:label="SepetFragment"
+        tools:layout="@layout/fragment_sepet"/>
+    <fragment
+        android:id="@+id/acilisFragment"
+        android:name="com.deliysuf.lottieapp.ui.fragments.AcilisFragment"
+        android:label="fragment_acilis"
+        tools:layout="@layout/fragment_acilis" >
+        <action
+            android:id="@+id/toAnasayfaFragment"
+            app:destination="@id/anasayfaFragment2"
+            app:enterAnim="@anim/animatrix" />
+    </fragment>
+</navigation>
